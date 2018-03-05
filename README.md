@@ -1,7 +1,7 @@
 # XOR with Neural Network
 This is a very simple example of how the [Basic Neural Network Library](https://github.com/kim-marcel/basic_neural_network) can be used. The library is a Java version of the one built by Daniel Shiffman in [this](https://www.youtube.com/watch?v=XJ7HLz9VYz0&list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh) playlist using the [Efficient Java Matrix Library](https://www.ejml.org) (EJML).
 
-The Neural Network (2 inputs, 4 hidden nodes and 1 output) is being trained for 50.000 iterations. After the training is completed the results are printed to the console. That's all what's going to happen. Here's a little screenshot:
+The Neural Network (2 inputs, 4 hidden nodes and 1 output) is being trained for 50.000 iterations. After the training is completed the results are printed to the console. That's all what's going to happen. Here's a screenshot:
 
 ![alt text](images/screenshot_xor-with-nn.png "This is how it should look when everything went right!")
 

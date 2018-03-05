@@ -33,7 +33,7 @@ public class Main {
                 {1, 1},
         };
 
-        NeuralNetwork nn = new NeuralNetwork(2,4, 1);
+        NeuralNetwork nn = new NeuralNetwork(2, 4, 1);
 
         // training
         for (int i = 0; i < 50000; i++) {

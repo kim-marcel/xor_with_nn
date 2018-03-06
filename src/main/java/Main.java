@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -44,7 +45,11 @@ public class Main {
 
         // testing the nn
         for (int i = 0; i < testingData.length; i++) {
-            System.out.println("Guess for " + testingData[i][0] + ", " + testingData[i][1] + ": \n" + nn.feedForward(testingData[i]));
+            System.out.println("Guess for " + testingData[i][0] + ", " + testingData[i][1] + ": ");
+            double[][] guess = nn.guess(testingData[i]);
+            for (int j = 0; j < guess.length; j++) {
+                System.out.println(Arrays.toString(guess[j]));
+            }
         }
     }
 

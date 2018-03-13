@@ -11,7 +11,7 @@ public class Main {
 
         Random r = new Random();
 
-        // Training Data
+        // Training Data Inputs
         double[][] trainingDataInputs = {
                 {0, 0},
                 {0, 1},
@@ -19,6 +19,7 @@ public class Main {
                 {1, 1},
         };
 
+        // Training Data Targets
         double[][] trainingDataTargets = {
                 {0},
                 {1},
@@ -36,14 +37,14 @@ public class Main {
 
         NeuralNetwork nn = new NeuralNetwork(2, 4, 1);
 
-        // training
+        // Training
         for (int i = 0; i < 50000; i++) {
             // training in random order
             int random = r.nextInt(4);
             nn.train(trainingDataInputs[random], trainingDataTargets[random]);
         }
 
-        // testing the nn
+        // Testing the nn
         for (int i = 0; i < testingData.length; i++) {
             System.out.println("Guess for " + testingData[i][0] + ", " + testingData[i][1] + ": ");
             double[][] guess = nn.guess(testingData[i]);
@@ -51,6 +52,8 @@ public class Main {
                 System.out.println(Arrays.toString(guess[j]));
             }
         }
+
+        nn.writeToFile();
     }
 
 

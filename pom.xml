@@ -13,9 +13,9 @@
         <dependency>
             <groupId>com.kim-marcel.basic_neural_network</groupId>
             <artifactId>basic_neural_network</artifactId>
-            <version>v0.1-alpha</version>
+            <version>v0.2</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/basic_neural_network-v0.1-alpha.jar</systemPath>
+            <systemPath>${project.basedir}/lib/basic_neural_network-v0.2.jar</systemPath>
         </dependency>
 
     </dependencies>

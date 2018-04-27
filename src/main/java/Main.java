@@ -1,3 +1,6 @@
+import basicneuralnetwork.NeuralNetwork;
+import basicneuralnetwork.activationfunctions.ActivationFunction;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -37,6 +40,8 @@ public class Main {
 
         NeuralNetwork nn = new NeuralNetwork(2, 4, 1);
 
+        nn.setActivationFunction(ActivationFunction.SIGMOID);
+
         // Training
         for (int i = 0; i < 50000; i++) {
             // training in random order
@@ -47,10 +52,8 @@ public class Main {
         // Testing the nn
         for (int i = 0; i < testingData.length; i++) {
             System.out.println("Guess for " + testingData[i][0] + ", " + testingData[i][1] + ": ");
-            double[][] guess = nn.guess(testingData[i]);
-            for (int j = 0; j < guess.length; j++) {
-                System.out.println(Arrays.toString(guess[j]));
-            }
+            double[] guess = nn.guess(testingData[i]);
+            System.out.println(Arrays.toString(guess));
         }
 
         nn.writeToFile();
